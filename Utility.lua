@@ -9,7 +9,7 @@ function utility:MouseOver(obj)
     return (mousePos.X >= x1 and mousePos.Y >= y1 and mousePos.X <= x2 and mousePos.Y <= y2)
 end
 
-local UIS = game:GetService("UserInputService")
+local UserInput = game:GetService("UserInputService")
 
 local cc = game.Workspace.CurrentCamera
 local currentccx = cc.ViewportSize.x
