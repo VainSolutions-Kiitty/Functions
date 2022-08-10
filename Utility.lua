@@ -1,5 +1,11 @@
 local utility = {RobloxPosition, RobloxSize , instance = {} , drag};
 
+local UserInput = game:GetService("UserInputService")
+
+local cc = game.Workspace.CurrentCamera
+local currentccx = cc.ViewportSize.x
+local currentccy = cc.ViewportSize.y
+
 function utility:MouseOver(obj)
     local mousePos = UserInput:GetMouseLocation()
     local x1 = obj.Position.X
@@ -9,11 +15,6 @@ function utility:MouseOver(obj)
     return (mousePos.X >= x1 and mousePos.Y >= y1 and mousePos.X <= x2 and mousePos.Y <= y2)
 end
 
-local UserInput = game:GetService("UserInputService")
-
-local cc = game.Workspace.CurrentCamera
-local currentccx = cc.ViewportSize.x
-local currentccy = cc.ViewportSize.y
 
 --
 utility.RobloxSize = function(xscale, xoffset, yscale, yoffset, instance)
