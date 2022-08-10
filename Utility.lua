@@ -11,7 +11,7 @@ function utility:MouseOver(obj)
     local x1 = obj.Position.X
     local y1 = obj.Position.Y
     local x2 = x1 + obj.Size.X
-    local y2 = y1 + obj.Size.Y
+    local y2 = y1 + obj.Size.Y -- hi
     return (mousePos.X >= x1 and mousePos.Y >= y1 and mousePos.X <= x2 and mousePos.Y <= y2)
 end
 
