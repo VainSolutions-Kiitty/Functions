@@ -64,7 +64,7 @@ function utility:dragify(Frame)
                 dragToggle = true
                 dragStart = input.Position
                 startPos = Frame.Position
-                library.Dragging = true
+                --library.Dragging = true
                 input.Changed:Connect(
                     function()
                         if input.UserInputState == Enum.UserInputState.End then
@@ -73,7 +73,7 @@ function utility:dragify(Frame)
                     end
                 )
             else
-                library.Dragging = false
+                --library.Dragging = false
             end
         end
     )
