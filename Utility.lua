@@ -138,3 +138,5 @@ utility.instance.new = function(type)
         return image
     end
 end
+
+return utility
