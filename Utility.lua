@@ -52,7 +52,7 @@ function utility:dragify(Frame)
     local dragPos = nil
     function updateInput(input)
         local Delta = input.Position - dragStart
-        local Position = udim2.pnew(0, startPos.X + Delta.X, 0, startPos.Y + Delta.Y)
+        local Position = utility.RobloxPosition(0, startPos.X + Delta.X, 0, startPos.Y + Delta.Y)
         Frame.Position = Position
     end
     UserInput.InputBegan:Connect(
