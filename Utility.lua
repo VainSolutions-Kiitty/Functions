@@ -45,7 +45,8 @@ utility.RobloxPosition = function(xscale, xoffset, yscale, yoffset, instance)
     return Vector2.new(x, y)
 end
 --
-function utility:dragify(Frame)
+function utility:dragify(Frame , EnabledValue)
+    EnabledValue = EnabledValue or True
     dragToggle = nil
     dragInput = nil
     dragStart = nil
@@ -60,7 +61,7 @@ function utility:dragify(Frame)
             if
                 (input.UserInputType == Enum.UserInputType.MouseButton1 or
                     input.UserInputType == Enum.UserInputType.Touch) and
-                    utility:MouseOver(Frame)
+                    utility:MouseOver(Frame) and EnabledValue
              then
                 dragToggle = true
                 dragStart = input.Position
