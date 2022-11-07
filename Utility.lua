@@ -107,6 +107,7 @@ utility.instance.new = function(type)
         frame.Color = Color3.fromRGB(255, 255, 255)
         frame.Size = Vector2.new(100, 100)
         frame.Position = Vector2.new(0, 0)
+        frame.ZIndex = 2
         return frame
     elseif type == "TextButton" then
         local Drawings = {}
@@ -123,7 +124,8 @@ utility.instance.new = function(type)
         Drawings["TextFrame"].Outline = true
         Drawings["TextFrame"].Center = false
         Drawings["TextFrame"].Color = Color3.fromRGB(255, 255, 255)
-
+        Drawings["TextFrame"].ZIndex = 2
+        Drawings["Background"].ZIndex = 2
         return Drawings
     elseif type == "TextLabel" or "textlabel" then
         local text = Drawing.new("Text")
@@ -132,6 +134,7 @@ utility.instance.new = function(type)
         text.Outline = true
         text.Center = false
         text.Color = Color3.fromRGB(255, 255, 255)
+        text.ZIndex = 2
         return text
     elseif type == "Image" or "image" then
         local image = Drawing.new("Image")
