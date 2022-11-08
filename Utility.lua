@@ -125,7 +125,6 @@ utility.instance.new = function(type)
         Drawings["TextFrame"].Center = false
         Drawings["TextFrame"].Color = Color3.fromRGB(255, 255, 255)
         Drawings["TextFrame"].ZIndex = 2
-        Drawings["Background"].ZIndex = 2
         return Drawings
     elseif type == "TextLabel" or "textlabel" then
         local text = Drawing.new("Text")
